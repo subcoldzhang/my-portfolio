@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@400;700&family=Lora:wght@400;600&display=swap');
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 28px;
+    height: 28px;
+    opacity: 0.9;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.social-icons img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Branding Text */
+.art-text {
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #222;
+    flex-grow: 1;
+}
+
+/* Navigation Menu */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #222;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: color 0.3s, transform 0.3s;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+    transform: translateY(-2px);
+}
+
+/* Ensure content is not hidden under the fixed header */
+body {
+    padding-top: 100px;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 120px 40px 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.main-title {
+    font-size: 3em;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.hero-image img:hover {
+    transform: scale(1.02);
+}
+
+/* Footer Styles */
+footer {
+    background: #f8f8f8;
+    color: #333;
+    text-align: center;
+    padding: 25px;
+    margin-top: 60px;
+    font-size: 1em;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}

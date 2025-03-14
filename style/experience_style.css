@@ -1,0 +1,108 @@
+/* experience_style.css */
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.experience-item {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+.experience-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.experience-item h2 {
+    font-size: 1.5em;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.experience-item h3 {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.experience-item p {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* Experience Detail Pages */
+.experience-detail {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.experience-detail h1 {
+    font-size: 2.5em;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.experience-detail h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #444;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.experience-detail h3 {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+    text-align: center;
+}
+
+.experience-detail p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+footer {
+    margin-top: 50px;
+}

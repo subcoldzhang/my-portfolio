@@ -1,97 +1,44 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My-portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-color: #f5f5f5;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-        }
-
-        h1 {
-            margin: 0;
-        }
-
-        h2 {
-            color: #444;
-        }
-
-        section {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin: 10px 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-        }
-
-        footer {
-            background-color: #222;
-            color: white;
-            padding: 10px;
-            margin-top: 20px;
-        }
-    </style>
+    <title>Responsive Navigation</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
+
+    <!-- Header with Social Icons and Navigation -->
     <header>
-        <h1>Yuhao Zhang</h1>
-        <p>AI Model Training | Data Science | ML Optimization</p>
+        <div class="header-container">
+            <div class="social-icons">
+                <a href="https://github.com/subcoldzhang"><img src="images/github.png" alt="Github"></a>
+            </div>
+            <div class="art-text">Yuhao Zhang</div>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="about/aboutme.html">About</a></li>
+                    <li><a href="experiences/experiences.html">Experiences</a></li>
+                    <li><a href="projects/projects.html">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section>
-        <h2>About me</h2>
-        <p>I am a data science graduate student at Vanderbilt University with a passion for AI training optimization.</p>
-    </section>
-
-    <section>
-        <h2>Experiences</h2>
-        <ul>
-            <li>📌 <a href="experiences/guorong-securities.html">Guorong Securities</a></li>
-            <li>📌 <a href="experiences/capital-jingdu-futures.html">Capital Jingdu Futures</a></li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Projects</h2>
-        <ul>
-            <li>📌 <a href="projects/generative-ai.html">Generative AI for Modeling</a></li>
-            <li>📌 <a href="projects/dssg.html">Data Science for Social Good (DSSG)</a></li>
-            <li>📌 <a href="projects/ai-phone-assistant.html">AI Phone Voice Assistant Design</a></li>
-        </ul>
-    </section>
+    <main>
+        <section class="hero-section">
+            <h1 class="main-title">Welcome to My Portfolio</h1>
+            <div class="hero-image">
+                <img src="images/me.jpg" alt="Me">
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>📧 Contact me:<a href="mailto:yuhao.zhang@vanderbilt.edu">yuhao.zhang@vanderbilt.edu</a></p>
+        <p>📧 Contact me: <a href="mailto:yuhao.zhang@vanderbilt.edu">yuhao.zhang@vanderbilt.edu</a></p>
     </footer>
+
 </body>
 </html>
-
