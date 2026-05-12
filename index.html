@@ -3,92 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuhao Zhang | AI Engineer Portfolio</title>
-    <link rel="stylesheet" href="style/style.css">
-    <script defer src="script.js"></script>
+    <meta name="description" content="Yuhao Zhang - Algorithm Engineer and applied AI builder.">
+    <title>Yuhao Zhang | Algorithm Engineer</title>
+    <link rel="stylesheet" href="style/style.css?v=20260512-rebuild">
+    <script defer src="script.js?v=20260512-rebuild"></script>
 </head>
 <body>
-
-    <!-- Header with Social Icons and Navigation -->
-    <header>
-        <div class="header-container">
-            <div class="social-icons">
-                <a href="https://github.com/subcoldzhang"><img src="images/github.png" alt="Github"></a>
-            </div>
-            <div class="art-text">Yuhao Zhang</div>
-            <nav id="navbar">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="about/aboutme.html">About</a></li>
-                    <li><a href="experiences/experiences.html">Experiences</a></li>
-                    <li><a href="projects/projects.html">Projects</a></li>
-                </ul>
+    <div class="site-shell">
+        <header class="topbar">
+            <a class="brand" href="#home" aria-label="Yuhao Zhang home">
+                <span class="brand-mark">yz</span>
+                <span class="brand-copy">
+                    <strong>Yuhao Zhang</strong>
+                    <small>algorithm engineer</small>
+                </span>
+            </a>
+            <nav aria-label="Primary navigation">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
             </nav>
-        </div>
-    </header>
+        </header>
 
-    <main>
-        <section class="hero-section">
-            <div class="hero-copy">
-                <p class="eyebrow">Algorithm Engineer at Li Auto</p>
-                <h1 class="main-title">Yuhao Zhang</h1>
-                <p class="hero-summary">
-                    I build applied AI systems across multimodal reasoning, model evaluation,
-                    data science, and production-ready algorithm design.
-                </p>
-                <div class="signal-row" aria-label="Technical focus">
-                    <span>Python</span>
-                    <span>Applied AI</span>
-                    <span>Multimodal Systems</span>
-                    <span>Production Algorithms</span>
-                </div>
-                <div class="hero-actions">
-                    <a href="projects/projects.html" class="btn">View Projects</a>
-                    <a href="experiences/experiences.html" class="btn secondary">Experience</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-image profile-frame">
-                    <img src="https://avatars.githubusercontent.com/u/143550483?v=4" alt="Yuhao Zhang">
-                </div>
-                <div class="terminal-card" aria-hidden="true">
-                    <div class="terminal-top">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+        <main>
+            <section id="home" class="hero-section section">
+                <div class="hero-copy">
+                    <p class="kicker">Li Auto / Applied AI / Production Algorithms</p>
+                    <h1>Building useful AI systems with clean engineering taste.</h1>
+                    <p class="hero-summary">
+                        I am Yuhao Zhang, an Algorithm Engineer focused on applied AI,
+                        multimodal reasoning, model evaluation, and production-ready
+                        algorithm design.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="primary-action" href="#projects">View work</a>
+                        <a class="secondary-action" href="https://github.com/subcoldzhang" target="_blank" rel="noopener">GitHub</a>
                     </div>
-                    <pre><code>$ whoami
-yuhao.zhang // algorithm engineer
-
-$ focus --current
-applied_ai, multimodal_reasoning, model_eval</code></pre>
                 </div>
-            </div>
-        </section>
 
-        <section class="featured-section">
-            <div class="feature-card">
-                <span class="feature-label">Current</span>
-                <h2>Li Auto</h2>
-                <p>Engineering practical AI systems for real-world product scenarios.</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-label">Recent project</span>
-                <h2>Giving AI Images, Not Just Words</h2>
-                <p>A public write-up on why multimodal AI workflows often beat text-only prompting.</p>
-                <a href="projects/ai-with-images.html">Read project</a>
-            </div>
-            <div class="feature-card">
-                <span class="feature-label">Background</span>
-                <h2>Math, Statistics, Data Science</h2>
-                <p>ANU dual bachelor's degrees and Vanderbilt M.S. in Data Science.</p>
-            </div>
-        </section>
-    </main>
+                <aside class="developer-card" aria-label="Developer profile">
+                    <div class="window-bar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <strong>profile.ts</strong>
+                    </div>
+                    <div class="profile-grid">
+                        <img src="https://avatars.githubusercontent.com/u/143550483?v=4" alt="Yuhao Zhang">
+                        <div>
+                            <p class="mono muted">const engineer =</p>
+                            <h2>Yuhao Zhang</h2>
+                            <p>Algorithm Engineer at Li Auto</p>
+                        </div>
+                    </div>
+                    <pre class="code-block"><code>focus = [
+  "applied_ai",
+  "multimodal_reasoning",
+  "model_building",
+  "data_systems"
+]</code></pre>
+                    <div class="terminal-line" id="terminal-line">$ initializing portfolio...</div>
+                </aside>
+            </section>
 
-    <footer>
-        <p>Contact me: <a href="mailto:zhangyuhao7@lixiang.com">zhangyuhao7@lixiang.com</a></p>
-    </footer>
+            <section id="about" class="section about-layout">
+                <div>
+                    <p class="section-label">01 / About</p>
+                    <h2>Engineer with a math and data science foundation.</h2>
+                </div>
+                <div class="about-panel">
+                    <p>
+                        I currently work at Li Auto as an Algorithm Engineer, focusing on
+                        practical AI systems, algorithm research and development, solution
+                        design, and model building for production environments.
+                    </p>
+                    <p>
+                        Before Li Auto, I worked on AI for drug discovery research in the
+                        United States and explored quantitative trading and data-driven
+                        decision systems.
+                    </p>
+                </div>
+            </section>
 
+            <section id="experience" class="section">
+                <div class="section-heading">
+                    <p class="section-label">02 / Experience</p>
+                    <h2>Where I have applied the work.</h2>
+                </div>
+                <div id="experience-list" class="timeline"></div>
+            </section>
+
+            <section id="projects" class="section">
+                <div class="section-heading">
+                    <p class="section-label">03 / Projects</p>
+                    <h2>Selected public work and research.</h2>
+                </div>
+                <div id="project-list" class="project-grid"></div>
+            </section>
+
+            <section id="education" class="section">
+                <div class="section-heading">
+                    <p class="section-label">04 / Education</p>
+                    <h2>Mathematics, statistics, and data science.</h2>
+                </div>
+                <div id="education-list" class="education-grid"></div>
+            </section>
+
+            <section id="contact" class="section contact-panel">
+                <p class="section-label">05 / Contact</p>
+                <h2>Open to thoughtful AI and engineering conversations.</h2>
+                <div class="contact-actions">
+                    <a href="mailto:zhangyuhao7@lixiang.com">zhangyuhao7@lixiang.com</a>
+                    <a href="https://www.linkedin.com/in/yuhao-saifhjw" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/subcoldzhang" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
