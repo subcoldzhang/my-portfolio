@@ -5,12 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Yuhao Zhang - Algorithm Engineer building practical AI systems.">
     <title>Yuhao Zhang | Algorithm Engineer</title>
-    <link rel="stylesheet" href="style/style.css?v=20260711-editorial">
-    <script defer src="script.js?v=20260711-editorial"></script>
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="stylesheet" href="style/style.css?v=20260711-noir">
+    <script defer src="script.js?v=20260711-noir"></script>
 </head>
 <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <div class="loader" id="loader" aria-hidden="true">
+        <span class="loader-name">Yuhao <em>Zhang</em></span>
+        <div class="loader-bar"><span></span></div>
+        <span class="loader-count">0</span>
+    </div>
+
     <header class="topbar">
-        <a class="monogram" href="#home" aria-label="Yuhao Zhang home">YZ</a>
+        <a class="monogram" data-magnetic href="#home" aria-label="Yuhao Zhang home">YZ</a>
         <nav aria-label="Primary navigation">
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
@@ -23,23 +32,28 @@
     <main>
         <section id="home" class="hero section">
             <div class="hero-heading">
-                <p class="eyebrow">Yuhao Zhang — Algorithm Engineer</p>
-                <h1>I turn complex AI into useful products.</h1>
+                <p class="eyebrow" data-reveal>Yuhao Zhang — Algorithm Engineer</p>
+                <h1 data-split>I turn complex AI into <em>useful</em> products.</h1>
             </div>
 
             <div class="hero-media">
                 <img src="https://avatars.githubusercontent.com/u/143550483?v=4" alt="Portrait of Yuhao Zhang">
-                <a class="talk-disc" href="#contact">
-                    <span>Let's talk</span>
-                    <strong>↘</strong>
+                <a class="talk-disc" data-magnetic href="#contact" aria-label="Let's talk">
+                    <svg class="disc-svg" viewBox="0 0 100 100" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+                        <defs>
+                            <path id="discPath" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"></path>
+                        </defs>
+                        <text><textPath href="#discPath" xlink:href="#discPath" startOffset="0">Let's talk • Let's talk • Let's talk • </textPath></text>
+                    </svg>
+                    <span class="disc-arrow">↘</span>
                 </a>
                 <p class="image-note">Currently building at Li Auto<br>Beijing / 2026</p>
             </div>
 
             <div class="hero-intro">
-                <p class="intro-lead">AI engineer with a background in mathematics, statistics, and data science.</p>
-                <p>I work across applied AI, multimodal reasoning, model evaluation, and production-ready algorithm design.</p>
-                <a href="#projects">Explore selected work <span>↓</span></a>
+                <p class="intro-lead" data-split>AI engineer with a background in mathematics, statistics, and data science.</p>
+                <p data-reveal>I work across applied AI, multimodal reasoning, model evaluation, and production-ready algorithm design.</p>
+                <a href="#projects" data-reveal>Explore selected work <span>↓</span></a>
             </div>
         </section>
 
@@ -48,15 +62,15 @@
         </section>
 
         <section id="about" class="about section">
-            <div class="section-index">01</div>
+            <div class="section-index" data-reveal>01</div>
             <div class="section-title">
-                <p>About me</p>
-                <h2>A mathematical mind with an engineering bias.</h2>
+                <p data-reveal>About me</p>
+                <h2 data-split>A mathematical mind with an <em>engineering</em> bias.</h2>
             </div>
             <div class="about-copy">
-                <p>I currently work at Li Auto as an Algorithm Engineer, focusing on practical AI systems, algorithm research and development, solution design, and model building for production environments.</p>
-                <p>Before Li Auto, I worked on AI for drug discovery research in the United States and explored quantitative trading and data-driven decision systems.</p>
-                <div class="about-meta">
+                <p data-reveal>I currently work at Li Auto as an Algorithm Engineer, focusing on practical AI systems, algorithm research and development, solution design, and model building for production environments.</p>
+                <p data-reveal>Before Li Auto, I worked on AI for drug discovery research in the United States and explored quantitative trading and data-driven decision systems.</p>
+                <div class="about-meta" data-reveal>
                     <span>Python</span>
                     <span>TypeScript</span>
                     <span>SQL</span>
@@ -69,10 +83,10 @@
         <section id="experience" class="experience section">
             <div class="section-head">
                 <div>
-                    <p class="section-index">02</p>
-                    <h2>Experience</h2>
+                    <p class="section-index" data-reveal>02</p>
+                    <h2 data-split>Experience</h2>
                 </div>
-                <p>Work across AI products, quantitative analysis, and research.</p>
+                <p data-reveal>Work across AI products, quantitative analysis, and research.</p>
             </div>
             <div id="experience-list" class="experience-list"></div>
         </section>
@@ -80,10 +94,10 @@
         <section id="projects" class="projects section">
             <div class="section-head">
                 <div>
-                    <p class="section-index">03</p>
-                    <h2>Selected projects</h2>
+                    <p class="section-index" data-reveal>03</p>
+                    <h2 data-split>Selected projects</h2>
                 </div>
-                <p>Public work spanning multimodal AI, deep learning, and voice systems.</p>
+                <p data-reveal>Public work spanning multimodal AI, deep learning, and voice systems.</p>
             </div>
             <div id="project-list" class="project-list"></div>
         </section>
@@ -91,18 +105,18 @@
         <section id="education" class="education section">
             <div class="section-head">
                 <div>
-                    <p class="section-index">04</p>
-                    <h2>Education</h2>
+                    <p class="section-index" data-reveal>04</p>
+                    <h2 data-split>Education</h2>
                 </div>
-                <p>Formal training across mathematics, statistics, and data science.</p>
+                <p data-reveal>Formal training across mathematics, statistics, and data science.</p>
             </div>
             <div id="education-list" class="education-list"></div>
         </section>
 
         <section id="contact" class="contact section">
-            <p class="section-index">05 / Available for thoughtful conversations</p>
-            <h2>Have an ambitious AI problem?</h2>
-            <a class="contact-link" href="mailto:zhangyuhao7@lixiang.com">Let's build something useful <span>↗</span></a>
+            <p class="section-index" data-reveal>05 / Available for thoughtful conversations</p>
+            <h2 data-split>Have an <em>ambitious</em> AI problem?</h2>
+            <a class="contact-link" data-magnetic href="mailto:zhangyuhao7@lixiang.com">Let's build something useful <span>↗</span></a>
             <div class="contact-footer">
                 <span>Yuhao Zhang © 2026</span>
                 <div>

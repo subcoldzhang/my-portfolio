@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 76px;
+    min-height: 74px;
     border-bottom: 1px solid var(--line);
 }
 
@@ -16,18 +16,19 @@
 .detail-nav a {
     font-weight: 600;
     text-decoration: none;
+    color: var(--text);
 }
 
 .detail-brand {
     display: grid;
-    width: 43px;
-    height: 43px;
+    width: 44px;
+    height: 44px;
     place-items: center;
     border-radius: 50%;
-    background: var(--ink);
-    color: var(--white);
-    font-family: 'Space Mono', monospace;
+    border: 1px solid var(--line-strong);
+    font-family: var(--f-mono);
     font-size: 0;
+    transition: background 0.3s var(--ease), color 0.3s var(--ease), border-color 0.3s var(--ease);
 }
 
 .detail-brand::after {
@@ -35,23 +36,34 @@
     font-size: 0.78rem;
 }
 
+.detail-brand:hover {
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-color: var(--accent);
+}
+
 .detail-nav a:last-child {
     font-size: 0.88rem;
+    color: var(--muted);
+    transition: color 0.25s var(--ease);
 }
+
+.detail-nav a:last-child:hover { color: var(--accent); }
 
 .experience-detail {
     display: grid;
     grid-template-columns: minmax(210px, 0.34fr) minmax(0, 1fr);
     gap: 6vw;
     padding: clamp(72px, 10vw, 148px) 0;
-    border-bottom: 1px solid var(--ink);
+    border-bottom: 1px solid var(--line);
 }
 
 .experience-detail::before {
     content: 'Work / Experience';
-    font-family: 'Space Mono', monospace;
+    font-family: var(--f-mono);
     font-size: 0.74rem;
     text-transform: uppercase;
+    color: var(--muted);
 }
 
 .experience-detail h1,
@@ -64,38 +76,32 @@
 .experience-detail h1 {
     max-width: 1060px;
     margin-bottom: 20px;
-    font-family: 'Manrope', sans-serif;
-    font-size: clamp(3.5rem, 8.5vw, 9rem);
-    font-weight: 600;
-    letter-spacing: -0.06em;
-    line-height: 0.9;
+    font-family: var(--f-display);
+    font-size: clamp(3.2rem, 8.5vw, 8.4rem);
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    line-height: 0.92;
 }
 
 .experience-detail h2,
 .experience-detail h3 {
-    font-family: 'Space Mono', monospace;
+    font-family: var(--f-mono);
     font-size: 0.76rem;
     font-weight: 400;
     text-transform: uppercase;
+    color: var(--muted);
 }
 
-.experience-detail h2::before {
-    content: 'Role — ';
-}
+.experience-detail h2::before { content: 'Role — '; color: var(--accent); }
 
-.experience-detail h3 {
-    margin: 8px 0 48px;
-}
-
-.experience-detail h3::before {
-    content: 'Period — ';
-}
+.experience-detail h3 { margin: 8px 0 48px; }
+.experience-detail h3::before { content: 'Period — '; color: var(--accent); }
 
 .experience-detail p {
     max-width: 760px;
     margin-bottom: 20px;
     color: var(--muted);
-    font-size: clamp(1.05rem, 1.45vw, 1.3rem);
+    font-size: clamp(1.05rem, 1.45vw, 1.28rem);
 }
 
 @media (max-width: 760px) {
