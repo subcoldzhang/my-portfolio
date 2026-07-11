@@ -1,98 +1,138 @@
 const content = {
+    skills: [
+        "Python", "Applied AI", "Multimodal Systems", "Model Evaluation",
+        "Deep Learning", "TypeScript", "SQL", "Redis", "Data Science"
+    ],
     experience: [
         {
             company: "Li Auto",
             role: "Algorithm Engineer / AI Engineer",
-            date: "Current",
-            detail: "Working on practical AI systems, algorithm research and development, solution design, and model building for production environments."
+            period: "Current"
         },
         {
             company: "Guorong Securities",
             role: "Investment Banking Intern",
-            date: "Feb 2022 - Apr 2022",
-            detail: "Completed listing feasibility studies and industry prospect analyses using quantitative methods to evaluate market position and growth potential."
+            period: "Feb 2022 — Apr 2022"
         },
         {
             company: "Capital Jingdu Futures",
             role: "Data Analysis Intern",
-            date: "Dec 2021 - Jan 2022",
-            detail: "Prepared weekly corporate analysis reports and transformed raw data into visual insights with Matplotlib and Seaborn."
+            period: "Dec 2021 — Jan 2022"
         }
     ],
     projects: [
         {
             title: "Giving AI Images, Not Just Words",
-            meta: "Multimodal AI research write-up / Apr 2026",
-            detail: "A public write-up on why giving models screenshots, diagrams, and charts can outperform text-only prompting for visual problems.",
-            tags: ["multimodal", "vision", "prompting"],
-            link: "https://github.com/subcoldzhang/ai-with-images"
+            meta: "Multimodal AI / 2026",
+            detail: "Why screenshots, diagrams, and charts can outperform text-only prompting for visual problems.",
+            link: "https://github.com/subcoldzhang/ai-with-images",
+            media: "image",
+            source: "https://raw.githubusercontent.com/subcoldzhang/ai-with-images/main/images/method_2.png",
+            poster: "AI"
         },
         {
             title: "Generative AI for Modeling",
-            meta: "Research analyst / Nov 2023 - Now",
-            detail: "Integrated CNNs and deep learning techniques to improve predictive modeling, data preprocessing, and structural analysis workflows.",
-            tags: ["deep-learning", "cnn", "research"],
-            link: "projects/generative_ai.html"
+            meta: "Deep Learning Research / 2023—Now",
+            detail: "CNN-based predictive modeling, structural analysis, and large-scale data preprocessing.",
+            link: "projects/generative_ai.html",
+            media: "poster",
+            poster: "GA"
         },
         {
             title: "Data Science for Social Good",
-            meta: "Data scientist / Jun 2024 - Aug 2024",
-            detail: "Developed and refined predictive methods using deep learning model architectures for classification and analysis tasks.",
-            tags: ["data-science", "modeling", "social-good"],
-            link: "projects/dssg_project.html"
+            meta: "Data Science / 2024",
+            detail: "Deep learning methods and refined model architectures for classification and prediction.",
+            link: "projects/dssg_project.html",
+            media: "poster",
+            poster: "DS"
         },
         {
             title: "AI Phone Voice Assistant",
-            meta: "Python engineer / Jun 2024 - Now",
-            detail: "Designed a locally deployed LLM voice assistant for real-time caller interaction, intent analysis, and conversational response generation.",
-            tags: ["python", "llm", "voice"],
-            link: "projects/ai_voice_assistant.html"
+            meta: "LLM Voice System / 2024—Now",
+            detail: "A locally deployed voice assistant for intent analysis and real-time conversational responses.",
+            link: "projects/ai_voice_assistant.html",
+            media: "video",
+            source: "videos/Introduce_phone.mp4",
+            poster: "VA"
         }
     ],
     education: [
         {
-            degree: "Master of Science in Data Science",
-            date: "Aug 2023 - May 2025",
+            period: "2023 — 2025",
+            degree: "M.S. in Data Science",
             school: "Vanderbilt University",
-            location: "Nashville, TN"
+            location: "Nashville, Tennessee"
         },
         {
-            degree: "Bachelor of Mathematical Sciences & Statistics",
-            date: "Feb 2019 - July 2023",
+            period: "2019 — 2023",
+            degree: "B.S. in Mathematics & Statistics",
             school: "Australian National University",
             location: "Canberra, Australia"
         }
     ]
 };
 
+function renderSkills() {
+    const marquee = document.getElementById("skill-marquee");
+    if (!marquee) return;
+
+    const group = content.skills
+        .map(skill => `<span class="skill">${skill}</span>`)
+        .join("");
+
+    marquee.innerHTML = `
+        <div class="skills-group">${group}</div>
+        <div class="skills-group" aria-hidden="true">${group}</div>
+    `;
+}
+
 function renderExperience() {
     const list = document.getElementById("experience-list");
     if (!list) return;
 
-    list.innerHTML = content.experience.map(item => `
-        <article class="timeline-item">
-            <div class="timeline-date">${item.date}</div>
-            <div>
-                <h3>${item.company}</h3>
-                <p class="mono muted">${item.role}</p>
-                <p>${item.detail}</p>
-            </div>
+    list.innerHTML = content.experience.map((item, index) => `
+        <article class="experience-row">
+            <span class="row-number">0${index + 1}</span>
+            <h3>${item.company}</h3>
+            <p class="row-role">${item.role}</p>
+            <p class="row-period">${item.period}</p>
         </article>
     `).join("");
+}
+
+function renderProjectMedia(project, index) {
+    if (project.media === "image") {
+        return `<img src="${project.source}" alt="Visual from ${project.title}">`;
+    }
+
+    if (project.media === "video") {
+        return `
+            <video muted loop playsinline preload="metadata" aria-label="${project.title} demo">
+                <source src="${project.source}" type="video/mp4">
+            </video>
+        `;
+    }
+
+    return `<span class="project-poster">${project.poster}</span>`;
 }
 
 function renderProjects() {
     const list = document.getElementById("project-list");
     if (!list) return;
 
-    list.innerHTML = content.projects.map(project => `
+    list.innerHTML = content.projects.map((project, index) => `
         <article class="project-card">
-            <p class="project-meta">${project.meta}</p>
-            <h3>${project.title}</h3>
-            <p>${project.detail}</p>
-            <a class="card-link" href="${project.link}" ${project.link.startsWith("http") ? 'target="_blank" rel="noopener"' : ""}>open project</a>
-            <div class="project-tags">
-                ${project.tags.map(tag => `<span>#${tag}</span>`).join("")}
+            <div class="project-visual">
+                <span class="project-number">0${index + 1}</span>
+                ${renderProjectMedia(project, index)}
+            </div>
+            <div class="project-copy">
+                <div>
+                    <p class="project-meta">${project.meta}</p>
+                    <h3>${project.title}</h3>
+                    <p>${project.detail}</p>
+                </div>
+                <a class="project-link" href="${project.link}" ${project.link.startsWith("http") ? 'target="_blank" rel="noopener"' : ""} aria-label="Open ${project.title}">↗</a>
             </div>
         </article>
     `).join("");
@@ -103,31 +143,13 @@ function renderEducation() {
     if (!list) return;
 
     list.innerHTML = content.education.map(item => `
-        <article class="education-card">
-            <p class="education-meta">${item.date}</p>
+        <article class="education-item">
+            <p class="education-period">${item.period}</p>
             <h3>${item.degree}</h3>
             <p>${item.school}</p>
             <p>${item.location}</p>
         </article>
     `).join("");
-}
-
-function animateTerminal() {
-    const terminal = document.getElementById("terminal-line");
-    if (!terminal) return;
-
-    const lines = [
-        "$ run model-eval --focus multimodal",
-        "$ ship useful systems > clever demos",
-        "$ stack: python | typescript | sql",
-        "$ status: building at Li Auto"
-    ];
-    let index = 0;
-
-    setInterval(() => {
-        index = (index + 1) % lines.length;
-        terminal.textContent = lines[index];
-    }, 1800);
 }
 
 function setActiveNav() {
@@ -136,6 +158,8 @@ function setActiveNav() {
         .map(link => document.querySelector(link.getAttribute("href")))
         .filter(Boolean);
 
+    if (!("IntersectionObserver" in window)) return;
+
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (!entry.isIntersecting) return;
@@ -143,15 +167,33 @@ function setActiveNav() {
                 link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`);
             });
         });
-    }, { rootMargin: "-45% 0px -45% 0px" });
+    }, { rootMargin: "-42% 0px -52% 0px" });
 
     sections.forEach(section => observer.observe(section));
 }
 
+function setupProjectVideo() {
+    const video = document.querySelector(".project-visual video");
+    if (!video || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                video.play().catch(() => {});
+            } else {
+                video.pause();
+            }
+        });
+    }, { threshold: 0.45 });
+
+    observer.observe(video);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+    renderSkills();
     renderExperience();
     renderProjects();
     renderEducation();
-    animateTerminal();
     setActiveNav();
+    setupProjectVideo();
 });
